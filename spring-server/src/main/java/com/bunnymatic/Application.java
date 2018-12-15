@@ -1,4 +1,4 @@
-package hello;
+package com.bunnymatic;
 
 import java.util.Arrays;
 

@@ -1,11 +1,12 @@
-package hello;
+package com.bunnymatic.controllers;
 
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.core.IsEqual.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.http.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,15 +18,18 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class HelloControllerTest {
+public class HeroControllerTest {
 
     @Autowired
     private MockMvc mvc;
 
     @Test
-    public void getHello() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+    public void getHero() throws Exception {
+        mvc.perform(
+                MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Yo")));
+                .andExpect(content().string(
+                        equalTo("{'name':'mr rogers', 'score':1.0, 'id':1}")
+                ));
     }
 }
