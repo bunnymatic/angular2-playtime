@@ -1,0 +1,45 @@
+.heroes {
+  margin-right: 40px;
+}
+.row {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid transparent;
+}
+.selected {
+  border-bottom: 1px solid purple;
+}
+.badge {
+  margin-right: 10px;
+  background-color: purple;
+  color: white;
+  padding: 4px 12px;
+  box-shadow: 3px 1px 3px rgba(128,28,128, 0.3);
+  border-top-left-radius: 12px;
+  cursor: pointer;
+}
+.info {
+  flex-basis: 100%;
+  display: flex;
+}
+.score {
+  margin-left: 10px;
+  font-style: italic;
+  font-weight: 100;
+  font-size: small;
+}
+
+.negative {
+  color: darkred;
+  .badge {
+    background-color: darkred;
+  }
+}
+.selected {
+  color: darkblue;
+  .badge {
+    background-color: darkblue;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "angular2-playtime",
+  "version": "1.0.0",
+  "description": "d",
+  "main": "index.js",
+  "author": "Mr Rogers",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@angular/cli": "^7.1.3"
+  }
+}
