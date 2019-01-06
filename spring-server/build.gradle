@@ -26,6 +26,7 @@ repositories {
     mavenCentral()
 }
 dependencies {
+	  implementation(project(':play'))
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework:spring-jdbc")
     compile("com.fasterxml.jackson.core:jackson-databind")
@@ -34,7 +35,6 @@ dependencies {
     testCompile("junit:junit")
     testCompile(group: 'org.hamcrest', name: 'hamcrest-core', version: '1.3')
 }
-
 application {
     mainClassName="com.bunnymatic.Application"
 }
