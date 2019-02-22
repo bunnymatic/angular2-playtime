@@ -1,23 +1,7 @@
-<ul class="heroes">
-  <li
-    class="row"
-    *ngFor="let hero of heroes"
-    [ngClass]="hero.classNames()"
-    [class.selected]="hero == selected"
-    >
-    <div
-    class="badge"
-    (click)="onSelect(hero)"
-    >
-      {{hero.id}}
-    </div>
-    <div class="info">
-      <span class="name">
-          {{hero.name}}
-      </span>
-      <span class="score">
-          {{hero.score}}
-      </span>
-    </div>
-  </li>
-</ul>
+<div class="heroes">
+  <button (click)="onSelect('step1')">step1</button>
+  <button (click)="onSelect('step2')">step2</button>
+
+  <ng-template #question></ng-template>
+  <ng-template #answer></ng-template>
+</div>
